@@ -22,9 +22,8 @@ function HomePage() {
 
   const fetchProducts = async () => {
     try {
-      const API_BASE_URL =
-        process.env.REACT_APP_API_BASE_URL || "https://e-commerce-backend1-vbs1.onrender.com";
-      const response = await axios.get(`${API_BASE_URL}/api/products`);
+      const API_URL = `${"https://e-commerce-backend1-vbs1.onrender.com"}/api/products`;
+      const response = await axios.get(API_URL);
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
