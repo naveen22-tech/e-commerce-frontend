@@ -23,7 +23,7 @@ function HomePage() {
   const fetchProducts = async () => {
     try {
       const API_BASE_URL =
-        process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+        process.env.REACT_APP_API_BASE_URL || "https://e-commerce-backend1-vbs1.onrender.com";
       const response = await axios.get(`${API_BASE_URL}/api/products`);
       setProducts(response.data);
     } catch (error) {
